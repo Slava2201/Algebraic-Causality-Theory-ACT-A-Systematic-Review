@@ -27,50 +27,44 @@ The theory provides a unified description of:
 
 
 Algebraic-Causality-Theory-ACT/
-├── docs/                           # Documentation
-│   ├── act_overview.pdf            # Comprehensive theory overview
-│   ├── mathematical_foundations.pdf # Rigorous mathematical formalism
-│   ├── figures/                     # Diagrams and illustrations
-│   └── references/                   # Reference materials
-├── src/                             # Source code
-│   ├── core/                         # Core data structures
-│   │   ├── graph.hpp/cpp             # Graph representation (chronons, edges, tetrahedra)
-│   │   ├── action.hpp/cpp             # ACT action implementation
-│   │   └── symmetries.hpp/cpp         # Symmetry group G = [W(D4) × S4] × Z2
-│   ├── dirac/                         # Dirac operator on the graph
-│   │   ├── dirac_operator.hpp/cpp     # Construction of DΓ
-│   │   ├── spectrum.hpp/cpp            # Eigenvalue computation
-│   │   └── extremal_modes.hpp/cpp      # Extremal mode analysis
-│   ├── cosmology/                      # Cosmological model
-│   │   ├── friedmann.hpp/cpp            # Modified Friedmann equations
-│   │   ├── dm_de_balance.hpp/cpp         # DM-DE coupled system
-│   │   └── observables.hpp/cpp            # CMB, BAO, SNe predictions
-│   ├── montecarlo/                      # Monte Carlo simulations
-│   │   ├── metropolis.hpp/cpp             # Metropolis updates
-│   │   ├── hmc.hpp/cpp                     # Hybrid Monte Carlo for fermions
-│   │   └── parallel.hpp/cpp                 # GPU-accelerated parallelization
-│   └── utils/                             # Utilities
-│       ├── io.hpp/cpp                        # HDF5 I/O
-│       ├── linalg.hpp/cpp                     # Linear algebra helpers
-│       └── profiling.hpp/cpp                    # Performance profiling
-├── examples/                           # Example scripts and notebooks
-│   ├── tutorial_1_basics.ipynb           # Introduction to ACT data structures
-│   ├── tutorial_2_dirac_spectrum.ipynb    # Computing the Dirac spectrum
-│   ├── tutorial_3_cosmology.ipynb          # Solving the cosmological model
-│   └── tutorial_4_montecarlo.ipynb          # Running Monte Carlo simulations
-├── data/                                # Sample data and configurations
-│   ├── configurations/                     # Pre-generated network configs
-│   ├── spectra/                             # Example Dirac spectra
-│   └── cosmology/                            # Cosmological trajectories
-├── tests/                                # Unit and integration tests
-│   ├── test_symmetries.cpp                   # Test gauge invariance
-│   ├── test_dirac.cpp                          # Test Dirac operator properties
-│   ├── test_continuum_limit.cpp                  # Test a → 0 limit
-│   └── test_cosmology.cpp                         # Test ΛCDM limit (Γ=0)
-├── CMakeLists.txt                         # Build configuration
-├── README.md                               # This file
-├── LICENSE                                  # License information
-└── CITATION.cff                             # Citation information
+├── docs/                        # Documentation
+│   ├── act_overview.pdf         # Comprehensive theory overview
+│   ├── mathematical_formalism.pdf
+│   ├── figures/                 # Diagrams and illustrations
+│   └── references/              # Reference materials
+├── src/                         # Source code
+│   ├── core/                    # Core data structures
+│   │   ├── graph.hpp/cpp        # Graph (chronons, edges, tetrahedra)
+│   │   ├── action.hpp/cpp       # ACT action implementation
+│   │   └── symmetries.hpp/cpp   # Symmetry group G
+│   ├── dirac/                   # Dirac operator on the graph
+│   │   ├── dirac_operator.hpp/cpp
+│   │   ├── spectrum.hpp/cpp     # Eigenvalue computation
+│   │   └── extremal_modes.hpp/cpp
+│   ├── cosmology/               # Cosmological model
+│   │   ├── friedmann.hpp/cpp    # Modified Friedmann equations
+│   │   ├── dm_de_balance.hpp/cpp
+│   │   └── observables.hpp/cpp  # CMB, BAO, SNe predictions
+│   ├── montecarlo/              # Monte Carlo simulations
+│   │   ├── metropolis.hpp/cpp
+│   │   ├── hmc.hpp/cpp          # Hybrid Monte Carlo
+│   │   └── parallel.hpp/cpp     # GPU-accelerated
+│   └── utils/                   # Utilities
+│       ├── io.hpp/cpp           # HDF5 I/O
+│       ├── linalg.hpp/cpp       # Linear algebra
+│       └── profiling.hpp/cpp
+├── examples/                    # Notebooks & scripts
+│   ├── tutorial_1_basics.ipynb
+│   └── tutorial_4_montecarlo.ipynb
+├── data/                        # Sample data & configs
+├── tests/                       # Unit and integration tests
+│   ├── test_symmetries.cpp      # Gauge invariance
+│   └── test_dirac.cpp           # Dirac operator properties
+├── CMakeLists.txt               # Build configuration
+├── README.md                    # Main info
+├── LICENSE                      # License
+└── CITATION.cff                 # Citation info
+
 
 
 ## 🔬 Key Theoretical Components
