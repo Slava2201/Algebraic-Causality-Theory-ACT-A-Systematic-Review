@@ -37,3 +37,25 @@ struct Graph {
 } // namespace act
 
 #endif // ACT_CORE_HPP
+
+
+
+%%writefile main.cpp
+#include <iostream>
+#include "act_core.hpp"
+
+int main() {
+    act::Graph G;
+    
+    // Создаем одну пробную вершину (хронон)
+    act::Vertex v1;
+    v1.id = 0;
+    v1.octant = 1;
+    
+    G.vertices.push_back(v1);
+
+    std::cout << "ACT Engine Initialized!" << std::endl;
+    std::cout << "Vertices in graph: " << G.vertices.size() << std::endl;
+    
+    return 0;
+}
